@@ -1,53 +1,28 @@
-<iframe
-  id="existing-iframe-example"
-  width="640"
-  height="360"
-  src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1"
-  frameborder="0"
-  style="border: solid 4px #37474f"
-></iframe>
-
-<script type="text/javascript">
-  var tag = document.createElement("script");
-  tag.id = "iframe-demo";
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName("script")[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  var player;
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player("existing-iframe-example", {
-      events: {
-        onReady: onPlayerReady,
-        onStateChange: onPlayerStateChange,
-      },
-    });
-  }
-  function onPlayerReady(event) {
-    document.getElementById("existing-iframe-example").style.borderColor =
-      "#FF6D00";
-  }
-  function changeBorderColor(playerStatus) {
-    var color;
-    if (playerStatus == -1) {
-      color = "#37474F"; // unstarted = gray
-    } else if (playerStatus == 0) {
-      color = "#FFFF00"; // ended = yellow
-    } else if (playerStatus == 1) {
-      color = "#33691E"; // playing = green
-    } else if (playerStatus == 2) {
-      color = "#DD2C00"; // paused = red
-    } else if (playerStatus == 3) {
-      color = "#AA00FF"; // buffering = purple
-    } else if (playerStatus == 5) {
-      color = "#FF6DOO"; // video cued = orange
-    }
-    if (color) {
-      document.getElementById("existing-iframe-example").style.borderColor =
-        color;
-    }
-  }
-  function onPlayerStateChange(event) {
-    changeBorderColor(event.data);
-  }
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+            <li>
+              <a href="yt.html">Youtube</a>
+            </li>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <h2>Home</h2>
+        <p>
+          Dicta voluptas magnam maiores illo natus nobis dignissimos doloremque voluptates? Sit maiores dignissimos recusandae nostrum porro cum id alias eaque quia, cupiditate ducimus enim hic beatae consectetur? Exercitationem est hic a? Aliquid ad, repellendus maiores dolorem eos, quam numquam laudantium itaque tempora iure cum quae eaque quas commodi. Pariatur ratione asperiores consequatur veritatis?
+        </p>
+    <script src="js/main.js"></script>
+  </body>
+</html>
